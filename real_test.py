@@ -38,7 +38,7 @@ model = network.GeoLocalizationNet(args)
 model = model.to(args.device)
  
 #### Test best model on test set
-best_model_state_dict = torch.load("%%%PATH BEST_MODEL.PTH INCLUSO%%%")["model_state_dict"]
+best_model_state_dict = torch.load("/content/drive/MyDrive/1.Baseline/best_model.pth")["model_state_dict"]
 model.load_state_dict(best_model_state_dict)
  
 recalls, recalls_str = test.test(args, test_ds, model)
